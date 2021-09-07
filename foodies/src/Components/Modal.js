@@ -1,4 +1,4 @@
-import { userEffect, useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom'
 
 const modalRoot = document.getElementById('nav');

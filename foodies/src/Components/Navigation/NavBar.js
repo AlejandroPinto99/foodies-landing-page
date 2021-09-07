@@ -3,12 +3,12 @@ import Desktop from "./DesktopNav";
 
 const NavBar = () => {
     return(
-      <div >
-          <div className=" hidden sm:flex">
+      <div className="my-2.5 mx-4">
+          <div className=" hidden sm:visible">
             <Desktop />
           </div>
 
-          <div className="flex sm:hidden flex-row-reverse m-2">
+          <div className="visible sm:hidden items-center">
             <MobileNav />
           </div>
       </div>
