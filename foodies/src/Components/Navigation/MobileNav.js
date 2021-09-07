@@ -14,7 +14,7 @@ const MobileNav = () => {
                 {
                  nav ? (
                     <div>
-                        <MobileNavExtended isOpen={nav} closeDialog={() => setNav(false)} />
+                        <MobileNavExtended isOpen={nav} closeDialog={() => setNav(false)}/>
                     </div>
                     ) : null
                 }         

@@ -2,15 +2,16 @@ import NavBar from  './Navigation/NavBar'
 
 
 import figure from '../assets/images/Subtract.svg'
+import rectangle from '../assets/images/bg_text.svg'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import hamburger from '../assets/images/hero_hamburger.png'
 
 const Home = () => {
     return(
         <div>
-            <div className="fixed z-0">
+            <div className="z-0">
                 <img src={figure} alt="subtract" 
-                    className="h-96 ml-3 "
+                    className="absolute h-96  top-0 right-0"
                 />
             </div>
            
@@ -25,7 +26,13 @@ const Home = () => {
                 <div>
                 </div>
                 <div className="mt-10">
-                    <h2 className="home-tittle text-4xl leading-8 px-3 mx-3">Un nuevo sabor esta en la ciudad</h2>
+                    <div>
+                        <h2 className="home-tittle relative z-10 text-4xl leading-8 px-3 mx-3">
+                            Un nuevo sabor esta en la ciudad
+                            </h2>
+                        <img src={rectangle} alt="rectangle" 
+                        className="absolute z-0 h-10 top-3/4 left-4"/>
+                    </div>
                     <p 
                     className="font-body font-normal text-m leading-6 px-3 mx-3 mt-3 text-gray-400 ">
                         Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables     
