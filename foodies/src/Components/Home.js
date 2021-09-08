@@ -15,9 +15,9 @@ const Home = () => {
                 />
             </div>
            
-            <div className="fixed z-10">    
+            <div className="relative z-10">    
                 <header className="flex flex-row justify-between items-center mt-4">
-                    <h1 className="ml-4 home-tittle text-3xl">Foodies</h1>
+                    <h1 className="ml-4 font-druk-bold text-3xl">Foodies</h1>
                     <NavBar /> 
                 </header>
                 <div> 
@@ -26,8 +26,8 @@ const Home = () => {
                 <div>
                 </div>
                 <div className="mt-10">
-                    <div>
-                        <h2 className="home-tittle relative z-10 text-4xl leading-8 px-3 mx-3">
+                    <div className="mb-5">
+                        <h2 className="font-druk-bold relative z-10 text-4xl leading-8 px-3 mx-3 pt-8">
                             Un nuevo sabor esta en la ciudad
                             </h2>
                         <img src={rectangle} alt="rectangle" 
@@ -39,7 +39,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="flex flex-row justify-start items-center mt-3 ">
-                    <p className="mx-4 px-2 links text-lg"><a href="/#"> Encuentranos</a></p>
+                    <p className="mx-4 px-2 font-syne-bold text-lg"><a href="/#"> Encuentranos</a></p>
                     <AiOutlineArrowRight/>
                 </div>
          
