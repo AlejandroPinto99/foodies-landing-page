@@ -17,7 +17,6 @@ const OfficeList = ({offices}) => {
                             'border border-transparent bg-yellow-200'} `}
                             onClick={() => setSelected(office.id)}
                             key={key}
-                            id={office.id}
                             name={office.name}
                             schedule={`${office.opening_time} - ${office.closing_time}`} 
                             address={office.address}

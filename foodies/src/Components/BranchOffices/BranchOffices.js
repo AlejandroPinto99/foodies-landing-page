@@ -7,14 +7,33 @@ import { GrPrevious } from 'react-icons/gr'
 import { GrNext } from 'react-icons/gr'
 
 const BranchOffices = () => {
-    const [type, setType] = useState('takeaway')
+    const [type, setType] = useState('takeaway');
     const [officeList, setOfficeList] = useState([]);
+    const [search, setSearch] = useState("");
+    const [comments, setComments] = useState([]);
 
     async function requestOffice() {
 
         try{
             const res = await fetch(
                 `https://api.elaniin.dev/api/locations?type=${type}` 
+            );
+
+            const json = await res.json();
+
+
+            setOfficeList(json.data);
+   
+            
+        } catch(e) {  //Managing any error
+            alert(e.message);
+       }    
+    }
+
+    async function searchOffice() {
+        try{
+            const res = await fetch(
+                `https://api.elaniin.dev/api/locations?type=${type}&query=${search}` 
             );
 
             const json = await res.json();
@@ -26,19 +45,24 @@ const BranchOffices = () => {
             
         } catch(e) {  //Managing any error
             alert(e.message);
-       }
-        
+       }    
     }
+     
 
     useEffect(() => {
         requestOffice();
     }, [type])
 
+    useEffect(() => {
+        searchOffice()
+    }, [search])
+
     const changeType = (t) => {
         setType(t);
     }
 
-    
+    console.log(search)
+   
     return(
         <div>
             <div className="flex flex-row justify-center border border-gray-300 ">
@@ -74,7 +98,9 @@ const BranchOffices = () => {
             </div>
 
             <div className="flex flex-row-reverse justify-end items-center border border-gray-300 ">
-                <input placeholder="Buscar nombre o dirección" className="relative py-3 pl-1 w-5/6 text-md"/>
+                <input placeholder="Buscar nombre o dirección" className="relative py-3 pl-1 w-5/6 text-md"
+                    onChange={e => setSearch(e.target.value)}
+                />
                 <BsSearch className="text-2xl w-1/6"/>
             </div>
 
@@ -92,7 +118,7 @@ const BranchOffices = () => {
                     y te atienden de la mejor manera.
                 </p>
             </div>
-            <div className="text-center py-5 flex flex-row items-center justify-center" >
+            <div className="text-center py-5 mb-10 flex flex-row items-center justify-center" >
                 <GrPrevious className="text-sm mx-2"/>
                 <p className="font-syne-bold text-gray-500">1 / 5</p>
                 <GrNext className="text-sm mx-2 " />

@@ -1,8 +1,4 @@
-import { useState } from 'react'
-
-const Card = ({id, name, schedule, address, onClick, styleRule}) => {
-    
-
+const Card = ({name, schedule, address, onClick, styleRule}) => {
 
     return (
     <div onClick={onClick}> 
