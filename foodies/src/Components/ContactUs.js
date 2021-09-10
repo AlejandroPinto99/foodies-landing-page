@@ -30,10 +30,12 @@ const ContactUs = () => {
                     </button>
                 </div>
             </form>
-
-            <img src={phone} alt="phone" 
-                className="absolute z-0 "
-            />
+            <div className="flex flex-row justify-center">
+                <img src={phone} alt="phone" 
+                    className="absolute z-0"
+                />
+            </div>
+           
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import Home from './Components/Home'
+import Home from './Components/HomeComponent/Home'
 import BigHero from './Components/bigHero'
 import QuienesSomos from './Components/QuienesSomos'
 import BranchOffice from './Components/BranchOffices/BranchOffices'
