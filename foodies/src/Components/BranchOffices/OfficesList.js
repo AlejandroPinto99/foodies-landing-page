@@ -1,13 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Card from './Card'
+import Map from './MapBox'
 
 const OfficeList = ({offices}) => {
     const [selected, setSelected] = useState();
+    const [element, setElement] = useState();
 
+    useEffect(() => {
+        setElement(offices.find(element => element.id === selected))
+    }, [selected])
 
     return(
-        <div>
+        <div className="md:flex md:flex-col lg:flex lg:flex-row items-center">
+            <div className="md:w-full lg:w-6/12">
             {
                 offices ? (
                 offices.map((office, key) => {
@@ -25,6 +31,13 @@ const OfficeList = ({offices}) => {
                 }) 
                 ) : null
             }
+            </div>
+           
+            <div className="hidden mt-10 md:relative md:flex md:w-full 
+            lg:flex lg:w-3/5 lg:ml-5 lg:mr-5 xl:w-3/5 xl:ml-5" 
+            style={{height: "60vh"}}>
+                <Map element={element}/>
+            </div>
         </div>
     )
 }
