@@ -3,6 +3,8 @@ import Links from './Links'
 import apple from '../../assets/images/apple.png'
 import google from '../../assets/images/google.png'
 
+import line from '../../assets/icons/Line.svg'
+
 const Footer = () => {
     return(
         <div>
@@ -12,11 +14,10 @@ const Footer = () => {
                     <img src={apple} alt="apple logo" className="mx-1"/>
                     <img src={google} alt="google logo" className="mx-1"/>
                 </div>
+            <img src={line} alt="line"
+                className="xs:250 md:w-300 lg:400"
+            />
 
-                <svg width="343" height="1" viewBox="0 0 343 1" fill="none" xmlns="http://www.w3.org/2000/svg"
-                >
-                    <line x1="-4.37114e-08" y1="0.5" x2="343" y2="0.49997" stroke="#FFC700"/>
-                </svg>
             </div>
             <Links />
         </div>

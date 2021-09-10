@@ -7,6 +7,7 @@ const bigHero = () => {
              <picture >
                  <source media="(max-width: 640px)" srcSet={SMimage} className="w-full"/>
                  <source media="(max-width: 1024px)" srcSet={MDimage} className="w-full" />
+
                  <img src={MDimage} alt="group22" className="w-full" />
              </picture>
         </div>

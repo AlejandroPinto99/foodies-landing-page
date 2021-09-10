@@ -12,25 +12,28 @@ const Home = () => {
                <BgImage />
             </div>
            
-            <div className="relative z-10">   
+            <div className="lg:ml-10 relative z-10">   
 
                 <header className="flex flex-row justify-between items-center mt-4">
-                    <h1 className="ml-4 font-druk-bold text-3xl">Foodies</h1>
-                    <NavBar className="mr-4" /> 
+                    <h1 className="ml-4 font-druk-bold text-3xl w-3/12">Foodies</h1>
+                    <NavBar className="mr-4"/> 
                 </header>
 
                 <div className="md:flex flex-row-reverse">
                     <div className="flex justify-center items-center md:w-6/12"> 
-                        <img src={hamburger} className="mt-10" alt="hamburger"/>
+                        <img src={hamburger} className="mt-10 w-80 md:w-96 xl:w-100" alt="hamburger"/>
                     </div>
+
                     <div className="mt-10 md:w-6/12">
                         <div className="mb-5">
-                            <h2 className="font-druk-bold relative z-10 text-4xl leading-8 px-3 mx-3 pt-8">
+                            <h2 className="font-druk-bold relative z-10 text-4xl leading-8 px-3 mx-3 pt-8 
+                            md:text-5xl xl:text-6xl">
                                 Un nuevo sabor esta en la ciudad
                             </h2>
                             <img src={rectangle} alt="rectangle" 
-                            className="absolute z-0 h-10 top-3/4 left-4 md:top-2/4"/>
+                            className="absolute -mt-10 ml-5 z-0 w-80 md:w-108 xl:w-200 xl:h-20 xl:-mt-20 xl:-ml-10"/>
                         </div>
+                        
                         <p className="font-body font-normal text-m leading-6 px-3 mx-3 mt-3 text-gray-400 ">
                             Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables     
                         </p>

@@ -65,6 +65,9 @@ const BranchOffices = () => {
    
     return(
         <div>
+            <div className="w-6/12 mb-10 ml-5">
+                <p className="font-druk-bold text-3xl lg:text-5xl">Estamos para ti</p>
+            </div>
             <div className="flex flex-row justify-center border border-gray-300 ">
 
                 <button className={`flex flex-row justify-center w-6/12 font-syne-bold 

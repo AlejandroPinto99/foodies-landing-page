@@ -7,9 +7,9 @@ const MobileNavExtended =(props) => {
     <Dialog className="absolute inset-x-0 h-full w-full z-30"  
     open={props.isOpen} onClose={props.closeDialog}>
       <Dialog.Overlay />
-            <div className="h-full w-full  bg-gray-600 bg-opacity-50">
-                <div className="h-3/5 w-full bg-white rounded-b-2xl">
-                    <div className="flex flex-row justify-between items-center pt-6 pr-3">
+            <nav className="h-full w-full  bg-gray-600 bg-opacity-50">
+                <div className="h-3/5 w-full bg-white rounded-b-2xl ">
+                    <div className="flex flex-row justify-between items-center pt-6 pr-3 md:pt-12 md:mb-10">
                       <h1 className="ml-4 font-druk-bold text-3xl">Foodies</h1>
                       <IoCloseSharp size="30px" onClick={props.closeDialog} />
                     </div>
@@ -27,7 +27,7 @@ const MobileNavExtended =(props) => {
                       </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
     </Dialog>
   )
 }

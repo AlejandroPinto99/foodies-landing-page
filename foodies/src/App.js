@@ -13,8 +13,10 @@ const App = () => {
     return(
       <div className="absolute z-10">
         <Home />
-        <BigHero />
-        <QuienesSomos />
+        <div className="xl:flex xl:flex-row">
+          <BigHero className="xl:w-6/12"/>
+          <QuienesSomos className="xl:w-6/12" />
+        </div>
         <BranchOffice />
         <ContactUs />
         <DownloadApp />

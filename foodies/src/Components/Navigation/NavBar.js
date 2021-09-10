@@ -4,12 +4,12 @@ import Desktop from "./DesktopNav";
 const NavBar = () => {
 
     return(
-      <div className="my-2.5 mx-4">
-          <div className=" hidden lg:visible">
+      <div className="my-2.5 mx-4 w-9/12 ">
+          <div className=" lg:flex hidden ">
             <Desktop />
           </div>
 
-          <div className="visible lg:hidden items-center">
+          <div className="visible items-center lg:hidden">
             <MobileNav />
           </div>
       </div>
