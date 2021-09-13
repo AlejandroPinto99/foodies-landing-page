@@ -9,9 +9,8 @@ const Home = () => {
     return(
         <div className="md:mb-60">
             <div className="z-0">
-               <BgImage />
+                <BgImage />
             </div>
-           
             <div className="lg:ml-10 relative z-10">   
 
                 <header className="flex flex-row justify-between items-center mt-4">

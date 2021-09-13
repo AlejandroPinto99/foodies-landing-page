@@ -2,8 +2,8 @@ import Home from './Components/HomeComponent/Home'
 import BigHero from './Components/bigHero'
 import QuienesSomos from './Components/QuienesSomos'
 import BranchOffice from './Components/BranchOffices/BranchOffices'
-import Feedback from './Components/Feedback'
-import ContactUs from './Components/ContactUs'
+import Testimonials from './Components/Testimonials'
+import ContactUs from './Components/ContactUs/ContactUs'
 import DownloadApp from './Components/DownloadApp/DownloadApp'
 import Footer from './Components/Footer/Footer'
 
@@ -19,7 +19,7 @@ const App = () => {
           <QuienesSomos className="xl:w-6/12" />
         </div>
         <BranchOffice />
-        <Feedback />
+        <Testimonials />
         <ContactUs />
         <DownloadApp />
         <Footer />
