@@ -1,9 +1,5 @@
 import { useState } from 'react'
 
-import { GrPrevious } from 'react-icons/gr'
-import { GrNext } from 'react-icons/gr'
-import { IconContext } from 'react-icons/lib';
-
 
 const Testimonials = () => {
 

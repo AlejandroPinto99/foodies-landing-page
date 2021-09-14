@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react'
 import Card from './Card'
 import Map from './MapBox'
 
-const OfficeList = ({offices}) => {
+import notFound from '../../assets/icons/NotFound.svg'
+
+const OfficeList = ({offices, found}) => {
     const [selected, setSelected] = useState();
     const [element, setElement] = useState();
 
@@ -11,11 +13,13 @@ const OfficeList = ({offices}) => {
         setElement(offices.find(element => element.id === selected))
     }, [selected])
 
+    console.log(offices)
+
     return(
         <div className="md:flex md:flex-col lg:flex lg:flex-row items-center">
             <div className="md:w-full lg:w-6/12">
             {
-                offices ? (
+                offices.length !== 0 ? (
                 offices.map((office, key) => {
                     return(
                         <Card 
@@ -29,10 +33,14 @@ const OfficeList = ({offices}) => {
                         />
                     )
                 }) 
-                ) : null
+                ) : (
+                    <div>
+                        <img src={notFound} alt="not found" />
+                    </div>
+                )
             }
             </div>
-           
+
             <div className="hidden mt-10 md:relative md:flex md:w-full 
             lg:flex lg:w-3/5 lg:ml-5 lg:mr-5 xl:w-3/5 xl:ml-5" 
             style={{height: "60vh"}}>

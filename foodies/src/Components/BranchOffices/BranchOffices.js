@@ -8,6 +8,7 @@ const BranchOffices = () => {
     const [type, setType] = useState('takeaway');
     const [officeList, setOfficeList] = useState([]);
     const [search, setSearch] = useState("");
+    const [found, setFound] = useState(false);
 
     async function requestOffice() {
 
@@ -17,7 +18,6 @@ const BranchOffices = () => {
             );
 
             const json = await res.json();
-
 
             setOfficeList(json.data);
             
@@ -33,6 +33,11 @@ const BranchOffices = () => {
             );
 
             const json = await res.json();
+
+
+            if(res.json.length === 0) {
+                setFound(!found)
+            }
 
             setOfficeList(json.data);
             
@@ -92,13 +97,14 @@ const BranchOffices = () => {
 
                 <div className="flex flex-row-reverse justify-end items-center border border-gray-300 ">
                     <input placeholder="Buscar nombre o dirección" className="relative py-3 pl-1 w-5/6 text-md"
+                        value={search}
                         onChange={e => setSearch(e.target.value)}
                     />
                     <BsSearch className="text-2xl w-1/6"/>
                 </div>
 
                 <div className="lg:ml-10">
-                    <OfficesList offices={officeList} />
+                    <OfficesList offices={officeList} found={found}/>
                 </div>
         </div>
     )

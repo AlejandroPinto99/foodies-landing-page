@@ -8,8 +8,6 @@ import DownloadApp from './Components/DownloadApp/DownloadApp'
 import Footer from './Components/Footer/Footer'
 
 
-
-
 const App = () => {
     return(
       <div className="absolute z-10">
