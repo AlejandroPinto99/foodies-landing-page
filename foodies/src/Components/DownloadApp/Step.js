@@ -1,6 +1,6 @@
 const Step = ({step, tittle, description}) => {
     return(
-        <div className="mt-10  mb-10">
+        <div className="mt-10  mb-10 md:mx-16">
             <div className="mb-5 flex flex-row justify-center items-center">
                 <p className="absolute z-10 text-white text-2xl self-baseline mt-1">{step}</p>
                 <svg width="42" height="42" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg" 

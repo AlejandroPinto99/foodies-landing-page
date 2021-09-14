@@ -7,7 +7,7 @@ import hamburger from '../../assets/images/hero_hamburger.png'
 
 const Home = () => {
     return(
-        <div className="md:mb-60">
+        <div className="md:mb-48">
             <div className="z-0">
                 <BgImage />
             </div>
@@ -39,9 +39,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row justify-start items-center mt-3 ">
-                    <p className="mx-4 px-2 font-syne-bold text-lg md:text-2xl md:mr-1 "><a href="/#"> Encuentranos</a></p>
-                    <AiOutlineArrowRight className="md:text-2xl"/>
+                <div className="flex flex-row justify-start items-center mt-3 md:mt-10 ">
+                    <p className="mx-4 px-2 font-syne-bold text-lg md:text-2xl md:mr-1"><a href="/#"> Encuentranos</a></p>
+                    <AiOutlineArrowRight className="md:text-2xl "/>
                 </div>
          
             </div>

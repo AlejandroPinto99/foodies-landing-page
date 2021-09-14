@@ -13,7 +13,6 @@ const OfficeList = ({offices, found}) => {
         setElement(offices.find(element => element.id === selected))
     }, [selected])
 
-    console.log(offices)
 
     return(
         <div className="md:flex md:flex-col lg:flex lg:flex-row items-center">
@@ -34,7 +33,7 @@ const OfficeList = ({offices, found}) => {
                     )
                 }) 
                 ) : (
-                    <div>
+                    <div className="flex flex-row justify-center py-4 my-4 mt-10">
                         <img src={notFound} alt="not found" />
                     </div>
                 )
