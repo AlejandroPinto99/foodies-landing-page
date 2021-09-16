@@ -7,7 +7,7 @@ const MenuPage = () => {
         <div>
             <div className="absolute z-10 bg-black">
                 <MenuHome className />
-                <div className="bg-white">
+                <div className="bg-white absolute z-10">
                     <Search />
                     <Footer />
                 </div>

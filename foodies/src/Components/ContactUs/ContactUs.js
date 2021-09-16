@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-import MenuHome from '../Menu/MenuHome'
-
 
 import formSended from '../../assets/icons/formSended.svg'
 
@@ -45,7 +43,7 @@ const ContactUs = () => {
     }
 
     return(
-        <div className="text-white bg-black py-48  lg:py-24"> 
+        <div id="contact" className="text-white bg-black py-48  lg:py-24"> 
             {
                 !sended ? (
                 <div className="md:mx-10">

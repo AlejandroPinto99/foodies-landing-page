@@ -4,7 +4,7 @@ import curly from '../assets/images/Curly.svg'
 
 const QuienesSomos = () => {
     return(
-        <div className="relative md:ml-5 xl:w-6/12">
+        <div id="acerca_de" className="relative md:ml-5 xl:w-6/12">
 
             <img src={curly} alt="curly line" 
             className="hidden  w-full

@@ -1,5 +1,5 @@
-import LandPage from './Landpage'
-import { Route, BrowserRouter as Router, Switch} from 'react-router-dom' 
+import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import LandPage from './Landpage' 
 import MenuPage from './MenuPage'
 
 

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 
 
 const Desktop = () => {
@@ -5,13 +7,16 @@ const Desktop = () => {
         <nav>
             <ul className="flex flex-row justify-start">
                     <li>
-                        <a href="/#acerda_de" className="font-syne-bold text-lg mr-12">Acerca de</a> 
+                        <a href="#acerca_de" className="scroll_to font-syne-bold text-lg mr-12">Acerca de</a> 
                     </li>
                     <li>
-                        <a href="/#restaurantes" className="font-syne-bold text-lg mr-12">Restaurantes</a> 
+                        <a href="#restaurantes" className="scroll_to font-syne-bold text-lg mr-12">Restaurantes </a>
                     </li>
                     <li>
-                        <a href="/#contactanos" className="font-syne-bold text-lg mr-12">Contáctanos</a> 
+                        <Link to="/menu" className="font-syne-bold text-lg mr-12">Menu</Link> 
+                    </li>
+                    <li>
+                        <a  href="#contact"className=" scroll_to font-syne-bold text-lg mr-12">Contáctanos</a> 
                     </li>
                 </ul>
         </nav>

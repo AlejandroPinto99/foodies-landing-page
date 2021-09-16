@@ -9,18 +9,19 @@ import Footer from './Components/Footer/Footer'
 
 const Landpage = () => {
     return(
-    <div className="absolute z-10">
-        <Home />
-        <div className="xl:flex xl:flex-row">
-            <BigHero className="xl:w-6/12"/>
-            <QuienesSomos className="xl:w-6/12" />
+        <div className="absolute z-10">
+            <Home />
+            <div className="xl:flex xl:flex-row">
+                <BigHero className="xl:w-6/12"/>
+                <QuienesSomos className="xl:w-6/12" id="acerca_de" />
+            </div>
+            <BranchOffice />
+            <Testimonials />
+            <ContactUs />
+            <DownloadApp />
+            <Footer />
         </div>
-        <BranchOffice />
-        <Testimonials />
-        <ContactUs />
-        <DownloadApp />
-        <Footer />
-    </div>
+
     )
 }
 

@@ -60,7 +60,7 @@ const BranchOffices = () => {
     }
 
     return(
-        <div>
+        <div id="restaurantes">
             <div className=" mb-10 ml-5">
                 <p className="font-druk-bold text-4xl mr-5 md:ml-5 lg:text-4xl ">Estamos para ti</p>
             </div>

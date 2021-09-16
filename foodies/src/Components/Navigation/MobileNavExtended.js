@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom'
+
 import { Dialog } from '@headlessui/react'
 import { IoCloseSharp } from 'react-icons/io5'
+
+
 
 const MobileNavExtended =(props) => {
 
@@ -16,13 +20,16 @@ const MobileNavExtended =(props) => {
                     <div className="h-2/4 mt-4">
                       <ul className="flex flex-col ml-4 justify-between h-full ">
                           <li>
-                            <a href="/#acerda_de" className="font-syne-bold text-2xl">Acerca de</a> 
+                            <a href="#acerca_de" className="font-syne-bold text-2xl">Acerca de</a> 
                           </li>
                           <li>
-                            <a href="/#restaurantes" className="font-syne-bold  text-2xl">Restaurantes</a> 
+                            <a href="#restaurantes" className="font-syne-bold  text-2xl">Restaurantes</a> 
                           </li>
                           <li>
-                            <a href="/#contactanos" className="font-syne-bold  text-2xl">Contáctanos</a> 
+                            <Link to="/menu" className="font-syne-bold  text-2xl">Menu</Link> 
+                          </li>
+                          <li>
+                            <a href="#contact" className="font-syne-bold  text-2xl">Contáctanos</a> 
                           </li>
                       </ul>
                     </div>
