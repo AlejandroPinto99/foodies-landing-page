@@ -8,7 +8,7 @@ const QuienesSomos = () => {
 
             <img src={curly} alt="curly line" 
             className="hidden  w-full
-            md:flex md:absolute md:z-0 md:-mt-16 
+            md:flex md:absolute md:z-0 md:-mt-32 md:-ml-2
             xl:w-full xl:top-56 "/>
 
             <div className="md:text-4xl mx-5 mt-16 mb-8">

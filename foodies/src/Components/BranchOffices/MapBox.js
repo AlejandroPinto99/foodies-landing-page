@@ -18,7 +18,6 @@ class MapBox extends Component{
                         this.props.element ? (
                             <Marker onClick={this.onMarkerClick}
                             position={{lat: this.props.element.latitude, lng: this.props.element.longitude}}/>
-                     
                         ) : null
                     }
                 </Map> 
@@ -29,4 +28,4 @@ class MapBox extends Component{
 
 export default GoogleApiWrapper({
     apiKey: ("AIzaSyCW5RiPl7JDZrA0paobjb_F2eRluDgDYEs")
-  })(MapBox)
+})(MapBox)

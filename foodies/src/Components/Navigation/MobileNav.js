@@ -10,9 +10,9 @@ const MobileNav = () => {
         <div>
             <nav className="flex flex-row-reverse">  
             <GiHamburgerMenu size="30px"
-             onClick={()=> setNav(true)}/>        
+            onClick={()=> setNav(true)}/>        
                 {
-                 nav ? (
+                nav ? (
                     <div>
                         <MobileNavExtended isOpen={nav} closeDialog={() => setNav(false)}/>
                     </div>

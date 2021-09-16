@@ -43,7 +43,6 @@ const Home = () => {
                     <p className="mx-4 px-2 font-syne-bold text-lg md:text-2xl md:mr-1"><a href="/#"> Encuentranos</a></p>
                     <AiOutlineArrowRight className="md:text-2xl "/>
                 </div>
-         
             </div>
         </div>
     )

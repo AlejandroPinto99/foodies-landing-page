@@ -7,9 +7,9 @@ import line from '../../assets/icons/Line.svg'
 
 const Footer = () => {
     return(
-        <div>
+        <div className="pb-2">
             <div className="flex flex-col items-center justify-center md:flex-row md:justify-between md:mx-10">
-                <p className="font-druk-bold text-2xl text-gray-500"> Foodies </p>
+                <p className="font-druk-bold text-2xl text-gray-500 lg:ml-10"> Foodies </p>
                 <div className="flex flex-row justify-center my-3">
                     <img src={apple} alt="apple logo" className="mx-1"/>
                     <img src={google} alt="google logo" className="mx-1"/>
@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col justify-center items-center">
             <img src={line} alt="line"
-                className="xs:250 md:w-400 lg:400 ml-5"
+                className="w-11/12"
             />
             </div>
             <Links />

@@ -3,6 +3,8 @@ import { useState } from 'react'
 import image from '../assets/images/Subtract_Red.svg'
 import image2 from '../assets/images/Subtract_Red_rotated.svg'
 
+import ketchup from '../assets/images/ketchup.png'
+
 
 const Testimonials = () => {
 
@@ -42,6 +44,9 @@ const Testimonials = () => {
                 <div>
                     <img src={image2} alt="red_back" className="absolute left-0 -bottom-72 z-0"/>
                 </div>
+                <div>
+                    <img src={ketchup} alt="ketchup" className="hidden xl:flex xl:absolute xl:right-0 xl:-top-32 z-0" />
+                </div>
             </div>
             
             {
@@ -51,7 +56,7 @@ const Testimonials = () => {
                         key={i}
                         className={`${show === i ? 'visible' : 'hidden'}`} 
                         >
-                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-3xl md:mx-20 md:mb-8">
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
                             "{testimony.tittle}"
                         </p>
                             

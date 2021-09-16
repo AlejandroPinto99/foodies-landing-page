@@ -8,7 +8,7 @@ const BgImage= () => {
              <picture >
                  <source media="(max-width: 768px)" srcSet={Subtract} className="absolute top-0 right-0"/>
                  <source media="(max-width: 1280px)" srcSet={SubtractM} className="absolute top-0 right-0" />
-                 <img src={SubtractL} alt="group22" className="absolute top-0 right-0" />
+                 <img src={SubtractL} alt="hamburger" className="absolute top-0 right-0" />
              </picture>
         </div>
     )

@@ -64,10 +64,10 @@ const BranchOffices = () => {
             <div className=" mb-10 ml-5">
                 <p className="font-druk-bold text-4xl mr-5 md:ml-5 lg:text-4xl ">Estamos para ti</p>
             </div>
-            <div className="flex flex-row justify-center border border-gray-300 ">
 
+            <div className="flex flex-row justify-center border border-gray-300 lg:w-6/12">
                 <button className={`flex flex-row justify-center w-6/12 font-syne-bold 
-                    border border-black text-sm py-3 sm:py-6 md:py-8 md:text-2xl lg:py-10 
+                    border border-black text-sm py-3 sm:py-6 md:py-8 md:text-2xl lg:py-5 
                     ${(type === `takeaway`) ? 'text-white bg-black':
                     'text-black bg-white'}`}
                     onClick={() => changeType('takeaway')}>
@@ -79,7 +79,7 @@ const BranchOffices = () => {
                     <p className="mt-3"> Para llevar</p>
                 </button>
 
-                    <button className={`flex flex-row justify-center items-center 
+                <button className={`flex flex-row justify-center items-center 
                     w-6/12 font-syne-bold text-sm py-2 md:text-2xl ${(type === `delivery`) ? 'text-white bg-black':
                     'text-black bg-white'}`}
                     onClick={() => changeType('delivery')}>
@@ -89,21 +89,20 @@ const BranchOffices = () => {
                         <path d="M3.91304 1.25385e-05C3.55285 1.25385e-05 3.26087 0.287829 3.26087 0.642869C3.26087 0.997909 3.55285 1.28573 3.91304 1.28573H20.1868L23.5802 6.45869C23.6576 6.57409 23.774 6.66364 23.9062 6.70983L28.6956 8.47768V14.7857H26.7187C26.5582 13.3422 25.3096 12.2143 23.8043 12.2143C22.2991 12.2143 21.0505 13.3422 20.8899 14.7857H12.3709C12.2104 13.3422 10.9618 12.2143 9.45652 12.2143C7.95127 12.2143 6.70268 13.3422 6.54212 14.7857H4.56522V10.9286C4.56522 10.5735 4.27324 10.2857 3.91304 10.2857C3.55285 10.2857 3.26087 10.5735 3.26087 10.9286V15.4286C3.2609 15.7652 3.57156 16.0714 3.91304 16.0714H6.69499C7.10093 17.1914 8.18684 18 9.45652 18C10.7262 18 11.8121 17.1914 12.2181 16.0714H21.0428C21.4488 17.1914 22.5347 18 23.8043 18C25.074 18 26.1599 17.1914 26.5659 16.0714H29.3478C29.6893 16.0714 30 15.7652 30 15.4286V8.03572C30 7.77466 29.8207 7.52279 29.572 7.43304L24.5686 5.58483L21.0937 0.291307C20.975 0.11214 20.7606 -0.00137282 20.5435 1.25385e-05H3.91304ZM0.652174 2.57144C0.291978 2.57144 0 2.85926 0 3.2143C0 3.56934 0.291978 3.85715 0.652174 3.85715H9.76868C10.1289 3.85715 10.4209 3.56934 10.4209 3.2143C10.4209 2.85926 10.1289 2.57144 9.76868 2.57144H0.652174ZM1.30435 5.14287C0.944152 5.14287 0.652174 5.43067 0.652174 5.78572C0.652174 6.14077 0.944152 6.42858 1.30435 6.42858H9.76868C10.1289 6.42858 10.4209 6.14077 10.4209 5.78572C10.4209 5.43067 10.1289 5.14287 9.76868 5.14287H1.30435ZM2.60869 7.71429C2.2485 7.71429 1.95652 8.0021 1.95652 8.35715C1.95652 8.7122 2.2485 9.00001 2.60869 9.00001H9.76868C10.1289 9.00001 10.4209 8.7122 10.4209 8.35715C10.4209 8.0021 10.1289 7.71429 9.76868 7.71429H2.60869ZM9.45652 13.5C10.3647 13.5 11.087 14.2119 11.087 15.1071C11.087 16.0024 10.3647 16.7143 9.45652 16.7143C8.54834 16.7143 7.82609 16.0024 7.82609 15.1071C7.82609 14.2119 8.54834 13.5 9.45652 13.5ZM23.8043 13.5C24.7125 13.5 25.4348 14.2119 25.4348 15.1071C25.4348 16.0024 24.7125 16.7143 23.8043 16.7143C22.8962 16.7143 22.1739 16.0024 22.1739 15.1071C22.1739 14.2119 22.8962 13.5 23.8043 13.5Z" fill="black"/>
                     </svg>
                     Domicilio
-
                 </button>
             </div>
 
-                <div className="flex flex-row-reverse justify-end items-center border border-gray-300 ">
-                    <input placeholder="Buscar nombre o dirección" className="relative py-3 pl-1 w-5/6 text-md"
-                        value={search}
-                        onChange={e => setSearch(e.target.value)}
-                    />
-                    <BsSearch className="text-2xl w-1/6"/>
-                </div>
+            <div className="flex flex-row-reverse justify-end items-center border border-gray-300 md:w-6/12 ">
+                <input placeholder="Buscar nombre o dirección" className="relative py-3 pl-1 w-5/6 text-md"
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
+                />
+                <BsSearch className="text-2xl w-1/6"/>
+            </div>
 
-                <div className="lg:ml-10">
-                    <OfficesList offices={officeList} found={found}/>
-                </div>
+            <div className="lg:ml-10">
+                <OfficesList offices={officeList} found={found}/>
+            </div>
         </div>
     )
     

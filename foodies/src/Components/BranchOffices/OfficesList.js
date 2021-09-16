@@ -16,7 +16,7 @@ const OfficeList = ({offices, found}) => {
 
     return(
         <div className="md:flex md:flex-col lg:flex lg:flex-row items-center">
-            <div className="md:w-full lg:w-6/12">
+            <div className="md:w-full lg:w-6/12  ">
             {
                 offices.length !== 0 ? (
                 offices.map((office, key) => {
@@ -41,8 +41,8 @@ const OfficeList = ({offices, found}) => {
             </div>
 
             <div className="hidden mt-10 md:relative md:flex md:w-full 
-            lg:flex lg:w-3/5 lg:ml-5 lg:mr-5 xl:w-3/5 xl:ml-5" 
-            style={{height: "60vh"}}>
+            lg:flex lg:w-5/12 lg:ml-10 lg:absolute lg:right-0 lg:mr-0 xl:w-6/12 xl:ml-5 lg:mb-36" 
+            style={{height: "70vh", width:"48%"}}>
                 <Map element={element}/>
             </div>
         </div>
