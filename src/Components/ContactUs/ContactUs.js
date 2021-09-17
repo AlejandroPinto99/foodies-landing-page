@@ -88,7 +88,8 @@ const ContactUs = () => {
                                 </label>
 
                                 <div className="flex flex-col items-center my-5 mb-36 lg:items-end lg:mr-5">
-                                    <button className="w-7/12 py-3 px-3 font-bold text-black bg-yellow-400 rounded-md md:w-3/12 lg:w-5/12"
+                                    <button className="w-7/12 py-3 px-3 font-bold text-black bg-yellow-400 rounded-md md:w-3/12
+                                    lg:w-5/12 hover:bg-yellow-200"
                                         type="submit">
                                             Enviar comentarios
                                     </button>

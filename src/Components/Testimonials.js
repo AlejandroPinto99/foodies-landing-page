@@ -15,7 +15,7 @@ const Testimonials = () => {
     const CarouselUI = ({position, handleClick, children}) => (
         <div className="overflow-hidden relative">
             {children}
-        <div className="mt-40">
+        <div className="mt-48">
             <div className=" text-center py-5 flex flex-row items-center justify-center z-20">
                 <div onClick={handleClick} data-position={position - 1} className="z-10  ">
 
