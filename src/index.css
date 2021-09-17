@@ -36,6 +36,22 @@ html {
   opacity: 0;
 }
 
+.links:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: rgb(8, 109, 204);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.links:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 
 @font-face {
   font-family: Druk-bold;

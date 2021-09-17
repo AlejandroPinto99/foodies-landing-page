@@ -20,16 +20,16 @@ const MobileNavExtended =(props) => {
                     <div className="h-2/4 mt-4">
                       <ul className="flex flex-col ml-4 justify-between h-full ">
                           <li>
-                            <a href="#acerca_de" className="font-syne-bold text-2xl">Acerca de</a> 
+                            <a href="#acerca_de" className="font-syne-bold text-2xl links">Acerca de</a> 
                           </li>
                           <li>
-                            <a href="#restaurantes" className="font-syne-bold  text-2xl">Restaurantes</a> 
+                            <a href="#restaurantes" className="font-syne-bold  text-2xl links">Restaurantes</a> 
                           </li>
                           <li>
-                            <Link to="/menu" className="font-syne-bold  text-2xl">Menu</Link> 
+                            <Link to="/menu" className="font-syne-bold  text-2xl links">Menu</Link> 
                           </li>
                           <li>
-                            <a href="#contact" className="font-syne-bold  text-2xl">Contáctanos</a> 
+                            <a href="#contact" className="font-syne-bold  text-2xl links">Contáctanos</a> 
                           </li>
                       </ul>
                     </div>

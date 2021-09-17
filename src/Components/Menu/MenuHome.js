@@ -1,6 +1,8 @@
 import NavBar from  '../Navigation/NavBar'
 import BgImage from './BgImage'
 
+import Slide from 'react-reveal'
+
 import rectangle from '../../assets/images/bg_text.svg'
 import hamburger from '../../assets/images/hero_hamburger_menu.png'
 
@@ -24,16 +26,19 @@ const MenuHome = () => {
 
                     <div className="mt-10 md:w-6/12">
                         <div className="mb-5">
-                            <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 pt-8 text-white
-                            md:text-5xl xl:text-6xl">
-                                Cada sabor es una nueva
+                            <Slide left>
+                                <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 pt-8 text-white
+                                md:text-5xl xl:text-6xl">
+                                    Cada sabor es una nueva
 
-                            </p>
-                            <div className="max-w-lg">
-                            <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 mb-24 mt-2 text-black
-                                md:text-5xl xl:text-6xl"> experiencia</p>
-                            <img src={rectangle} alt="rectagle" className="relative z-0 -top-36 xl:-top-40 left-2 w-11/12 xl:w-full" />
-                            </div>
+                                </p>
+                                <div className="max-w-lg">
+                                <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 mb-24 mt-2 text-black
+                                    md:text-5xl xl:text-6xl"> experiencia</p>
+                                    
+                                <img src={rectangle} alt="rectagle" className="relative z-0 -top-36 xl:-top-40 left-2 w-11/12 xl:w-full" />
+                                </div>
+                            </Slide>
                         </div>
                     </div>
                 </div>

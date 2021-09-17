@@ -157,7 +157,7 @@ const Search = () => {
             {pages}
         </div>
         <div className="flex flex-row justify-center">
-            <button className="py-3 px-10 bg-yellow-100 rounded-lg font-semibold"
+            <button className="py-3 px-10 bg-yellow-400 rounded-lg font-semibold hover:bg-yellow-200"
             onClick={() => changePage(page + 1 > meta.last_page ? 1 : page + 1)}> 
             Siguiente
             </button> 
