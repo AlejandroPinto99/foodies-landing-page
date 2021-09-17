@@ -1,3 +1,5 @@
+import Slide from 'react-reveal'
+
 import {AiOutlineArrowRight} from 'react-icons/ai'
 
 import curly from '../assets/images/Curly.svg'
@@ -14,13 +16,15 @@ const QuienesSomos = () => {
             <div className="md:text-4xl mx-5 mt-16 mb-8">
                 <div className="md:mr-5 relative z-20 md:mb-52 xl:flex xl:flex-col xl:align-baseline">
                     <div className=" md:mb-20">
-                        <h2 className="font-syne-bold mb-8">¿Quién es Foodie?</h2>
-                        <p className="text-sm md:text-lg text-gray-500 ">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat id sit reiciendis, 
-                            vitae adipisci a laboriosam illo blanditiis distinctio, quibusdam architecto quis ?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat id sit reiciendis, 
-                            vitae adipisci a laboriosam illo blanditiis distinctio, quibusdam architecto quis ?
-                        </p>
+                        <Slide right >
+                            <h2 className="font-syne-bold mb-8">¿Quién es Foodie?</h2>
+                            <p className="text-sm md:text-lg text-gray-500 ">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat id sit reiciendis, 
+                                vitae adipisci a laboriosam illo blanditiis distinctio, quibusdam architecto quis ?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat id sit reiciendis, 
+                                vitae adipisci a laboriosam illo blanditiis distinctio, quibusdam architecto quis ?
+                            </p>
+                        </Slide>
                     </div>
                     
                     <div className="flex flex-row justify-start items-center font-syne-bold mt-12 md:mt-12 ">

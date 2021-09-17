@@ -32,8 +32,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
+.text--fading [data-scroll='out'] .char {
+  opacity: 0;
+}
 
 
 @font-face {
@@ -45,3 +46,4 @@ html {
   font-family: Syne-Bold;
   src: url('./fonts/Syne/Syne-Bold.ttf')
 }
+

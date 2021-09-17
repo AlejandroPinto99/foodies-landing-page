@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Slide from 'react-reveal'
 
 import image from '../assets/images/Subtract_Red.svg'
 import image2 from '../assets/images/Subtract_Red_rotated.svg'
@@ -9,6 +10,25 @@ import ketchup from '../assets/images/ketchup.png'
 const Testimonials = () => {
 
     const [show, setShow] = useState(0);
+
+    const ChangeRight = () => {
+
+        if(show > 0) {
+            setShow(show - 1) 
+        } else {
+            setShow(show)
+        }        
+    }
+
+    const ChangeLeft = () => {
+        if (show < (testimonials.length - 1)) {
+            setShow(show + 1)
+        } else {
+            setShow(show)
+        }
+
+        
+    }
 
 
     const testimonials = [
@@ -53,16 +73,19 @@ const Testimonials = () => {
                 testimonials.map((testimony, i) => {
                     return(
                         <div
+                        id={i+1}
                         key={i}
-                        className={`${show === i ? 'visible' : 'hidden'}`} 
+                        className={`${show === i ? 'visible' : 'hidden'} transform`} 
                         >
-                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
-                            "{testimony.tittle}"
-                        </p>
-                            
-                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
-                            {testimony.testimony}
-                        </p>
+                        <Slide right>
+                            <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
+                                "{testimony.tittle}"
+                            </p>
+                                
+                            <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                                {testimony.testimony}
+                            </p>
+                        </Slide>
                     </div>
                     )
                 })
@@ -71,18 +94,17 @@ const Testimonials = () => {
             <div className=" text-center py-5 mb-10 flex flex-row items-center justify-center z-20">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24" 
                 stroke={`${show === 0 ? 'currentColor' : '#FFD600'}`}
-                onClick={() => `${show > 0 ? setShow(show - 1) : setShow(show)}`}>
+                onClick={() => ChangeRight()}>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
 
                 <p className="font-syne-bold text-gray-500 md:text-2xl"> {show + 1} / {testimonials.length}</p>
 
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24"
-                    onClick={() => `${show <(testimonials.length - 1) ? setShow(show + 1) : setShow(show)}`}
+                    onClick={() => ChangeLeft()}
                     stroke={`${show === (testimonials.length - 1) ? 'currentColor' : '#FFD600'}`}>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />      
                 </svg>
-
             </div>
         </div>
     )

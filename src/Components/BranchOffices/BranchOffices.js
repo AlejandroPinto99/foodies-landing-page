@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Slide from 'react-reveal/Slide'
 
 import OfficesList from './OfficesList'
 
@@ -62,7 +63,9 @@ const BranchOffices = () => {
     return(
         <div id="restaurantes">
             <div className=" mb-10 ml-5">
+                <Slide left >
                 <p className="font-druk-bold text-4xl mr-5 md:ml-5 lg:text-4xl ">Estamos para ti</p>
+                </Slide>
             </div>
 
             <div className="flex flex-row justify-center border border-gray-300 lg:w-6/12">

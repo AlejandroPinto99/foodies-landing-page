@@ -1,9 +1,12 @@
+import Slide from 'react-reveal'
+
 import NavBar from  '../Navigation/NavBar'
 import BgImage from './BgImage'
 
 import rectangle from '../../assets/images/bg_text.svg'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import hamburger from '../../assets/images/hero_hamburger.png'
+
 
 const Home = () => {
     return(
@@ -22,7 +25,7 @@ const Home = () => {
                     <div className="flex justify-center items-center md:w-6/12"> 
                         <img src={hamburger} className="mt-10 w-80 md:w-96 xl:w-100" alt="hamburger"/>
                     </div>
-
+                <Slide left >
                     <div className="mt-10 md:w-6/12">
                         <div className="mb-5">
                             <h2 className="font-druk-bold relative z-10 text-4xl leading-8 px-3 mx-3 pt-8 
@@ -37,6 +40,7 @@ const Home = () => {
                             Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables     
                         </p>
                     </div>
+                </Slide>
                 </div>
 
                 <div className="flex flex-row justify-start items-center mt-3 md:mt-10 ">

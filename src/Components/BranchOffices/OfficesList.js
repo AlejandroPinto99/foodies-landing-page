@@ -23,7 +23,8 @@ const OfficeList = ({offices, found}) => {
                     return(
                         <Card 
                             styleRule={`my-3 mx-3 pt-3 pb-4 pl-2 pr-4 ${!(selected === office.id) ? 'border border-black rounded-md big-white' : 
-                            'border border-transparent bg-yellow-200'} `}
+                            'border border-transparent bg-yellow-200'} transition duration-500 ease-in-out hover:border-yellow-100 
+                            hover:bg-yellow-100 transform hover:-translate-y-1 hover:scale-100 `}
                             onClick={() => setSelected(office.id)}
                             key={key}
                             name={office.name}
