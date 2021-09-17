@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Slide from 'react-reveal'
+import makeCarousel from 'react-reveal/makeCarousel';
 
 import image from '../assets/images/Subtract_Red.svg'
 import image2 from '../assets/images/Subtract_Red_rotated.svg'
@@ -11,24 +12,37 @@ const Testimonials = () => {
 
     const [show, setShow] = useState(0);
 
-    const ChangeRight = () => {
+    const CarouselUI = ({position, handleClick, children}) => (
+        <div className="overflow-hidden relative">
+            {children}
+        <div className="mt-40">
+            <div className=" text-center py-5 flex flex-row items-center justify-center z-20">
+                <div onClick={handleClick} data-position={position - 1} className="z-10  ">
 
-        if(show > 0) {
-            setShow(show - 1) 
-        } else {
-            setShow(show)
-        }        
-    }
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24" 
+                    stroke='#FFD600'>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
 
-    const ChangeLeft = () => {
-        if (show < (testimonials.length - 1)) {
-            setShow(show + 1)
-        } else {
-            setShow(show)
-        }
+                    <p className="font-syne-bold text-gray-500 md:text-2xl"> {position + 1} / {testimonials.length}</p>
 
-        
-    }
+                    <div onClick={handleClick} data-position={position + 1} className=" z-10 ">
+                        {
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24"
+                                stroke='#FFD600'
+                                >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />      
+                            </svg>
+                        }
+                    </div>
+                </div>
+        </div>
+            
+        </div>
+    );
+
+    const Carousel = makeCarousel(CarouselUI)
 
 
     const testimonials = [
@@ -68,44 +82,62 @@ const Testimonials = () => {
                     <img src={ketchup} alt="ketchup" className="hidden xl:flex xl:absolute xl:right-0 xl:-top-32 z-0" />
                 </div>
             </div>
-            
-            {
-                testimonials.map((testimony, i) => {
-                    return(
-                        <div
-                        id={i+1}
-                        key={i}
-                        className={`${show === i ? 'visible' : 'hidden'} transform`} 
-                        >
-                        <Slide right>
-                            <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
-                                "{testimony.tittle}"
-                            </p>
-                                
-                            <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
-                                {testimony.testimony}
-                            </p>
-                        </Slide>
+            <Carousel>
+                <Slide right>
+                    <div>
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-52 md:mb-8 ">
+                            "{testimonials[0].tittle}"
+                        </p>
+                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                            {testimonials[0].testimony}
+                        </p>
                     </div>
-                    )
-                })
-            }
+                </Slide>
+                <Slide right>
+                    <div>
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
+                            "{testimonials[1].tittle}"
+                        </p>
+                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                            {testimonials[1].testimony}
+                        </p>
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div>
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
+                            "{testimonials[2].tittle}"
+                        </p>
+                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                            {testimonials[2].testimony}
+                        </p>
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div>
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
+                            "{testimonials[3].tittle}"
+                        </p>
+                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                            {testimonials[3].testimony}
+                        </p>
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div>
+                        <p className= "font-druk-bold text-xl mt-12 mb-3 px-5 text-center md:text-2xl md:mx-+++52 md:mb-8 ">
+                            "{testimonials[4].tittle}"
+                        </p>
+                        <p className="text-gray-400 text-center px-2 leading-5 text-md md:mx-20 md:mb-24">
+                            {testimonials[4].testimony}
+                        </p>
+                    </div>
+                </Slide>
+                        
+            </Carousel>
+                    
 
-            <div className=" text-center py-5 mb-10 flex flex-row items-center justify-center z-20">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24" 
-                stroke={`${show === 0 ? 'currentColor' : '#FFD600'}`}
-                onClick={() => ChangeRight()}>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-
-                <p className="font-syne-bold text-gray-500 md:text-2xl"> {show + 1} / {testimonials.length}</p>
-
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-sm mx-2" fill="none" viewBox="0 0 24 24"
-                    onClick={() => ChangeLeft()}
-                    stroke={`${show === (testimonials.length - 1) ? 'currentColor' : '#FFD600'}`}>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />      
-                </svg>
-            </div>
+            
         </div>
     )
 }
