@@ -123,13 +123,15 @@ const Search = () => {
                 </ul>
         </div>
 
-        <div className="flex flex-row px-4 py-6 md:flex-col">
-                <div className="flex flex-row-reverse justify-end items-center border border-gray-300 rounded-lg w-10/12 md:w-6/12 ">
-                    <input placeholder="Busca tu platillo favorito..." className="relative py-3 pl-1 w-5/6 text-md"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    />
-                    <BsSearch className="text-2xl w-1/6"/>
+        <div className="flex flex-row justify-between px-4 py-6 md:flex-col">
+                <div className="lg:flex lg:flex-row lg:justify-center">
+                    <div className="flex flex-row-reverse items-center justify-end border border-gray-300 rounded-lg w-full md:w-6/12 ">
+                        <input placeholder="Busca tu platillo favorito..." className="relative py-3 pl-1 w-5/6 text-md"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        />
+                        <BsSearch className="text-2xl w-1/6"/>
+                    </div> 
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 ml-3 p-1  md:hidden" viewBox="0 0 20 20" fill="currentColor"
                 onClick={() => setFilter(!filter)}
@@ -137,7 +139,7 @@ const Search = () => {
                 <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
                 </svg> 
                 <div>
-                    <ul className="hidden md:flex flex-row justify-between mx-5 my-2 font-druk-bold text-sm">
+                    <ul className="hidden md:flex flex-row justify-between mx-5 my-2 font-druk-bold text-sm lg:text-xl">
                         <li className="mx-3" onClick={() => requestAll()}>Todos</li>
                         <li className="mx-3" onClick={() => requestCategory(1)}>Las Tradicionales</li>
                         <li className="mx-3" onClick={() => requestCategory(2)}>Recomendaciones</li>

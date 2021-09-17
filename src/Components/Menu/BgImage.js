@@ -1,6 +1,6 @@
 import Subtract from '../../assets/images/Subtract_Menu.png'
 import SubtractM from '../../assets/images/Subtract_Menu_M.png'
-import SubtractL from '../../assets/images/SubtractL.svg'
+import SubtractL from '../../assets/images/Subtract_Menu_L.png'
 
 const BgImage= () => {
     return(

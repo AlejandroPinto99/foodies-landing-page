@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 
 
-const Desktop = () => {
+const Desktop = ({color}) => {
     return(
         <nav>
-            <ul className="flex flex-row justify-start">
+            <ul className={`flex flex-row justify-start text-${color}`}>
                     <li>
                         <a href="#acerca_de" className="scroll_to font-syne-bold text-lg mr-12">Acerca de</a> 
                     </li>

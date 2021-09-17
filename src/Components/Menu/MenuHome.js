@@ -14,7 +14,7 @@ const MenuHome = () => {
 
                 <header className="flex flex-row justify-between items-center mt-4">
                     <h1 className="ml-4 font-druk-bold text-3xl w-3/12 text-white">Foodies</h1>
-                    <NavBar className="mr-4"/> 
+                    <NavBar className="mr-4" color="white"/> 
                 </header>
 
                 <div className="md:flex flex-row-reverse">
@@ -30,9 +30,9 @@ const MenuHome = () => {
 
                             </p>
                             <div className="max-w-lg">
-                            <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 mb-24 text-black
+                            <p className="font-druk-bold relative z-10 text-3xl leading-8 px-3 mx-3 mb-24 mt-2 text-black
                                 md:text-5xl xl:text-6xl"> experiencia</p>
-                            <img src={rectangle} alt="rectagle" className="relative z-0 -top-36 left-2 w-11/12" />
+                            <img src={rectangle} alt="rectagle" className="relative z-0 -top-36 xl:-top-40 left-2 w-11/12 xl:w-full" />
                             </div>
                         </div>
                     </div>
